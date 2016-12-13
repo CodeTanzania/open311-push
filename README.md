@@ -22,17 +22,24 @@ $ npm install --save open311-push
 ```js
 const mongoose = require('mongoose');
 const Message = require('open311-messages')(<options>);
-const push = require('open311-push')(<options>);
+const push = require('open311-push')({
+    apiKey:<your_fcm_api_key>
+});
 
 //queue message for sending
 const message = new Message(<message_details>);
 push.queue(message);
 
 
-//start push worker in background process(s)
-//to process and send queued message as push notification
+//start push worker(s) in background process(s)
+//to process and send queued message(s) as push notification(s)
 push.start();
 ```
+
+## Options
+- `apiKey:String` valid Google FCM API key
+- All [kue supported configuration options](https://github.com/Automattic/kue#redis-connection-settings)
+
 
 
 ## Testing
