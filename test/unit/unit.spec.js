@@ -21,6 +21,7 @@ describe('push', function () {
   });
 
   it('should be able to queue message', function () {
+
     const details = {
       from: faker.internet.email(),
       to: faker.internet.email(),
