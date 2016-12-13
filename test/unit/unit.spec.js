@@ -44,6 +44,31 @@ describe('push', function () {
 
   });
 
+  it('should be able to simulate message send', function (done) {
+    const details = {
+      from: faker.internet.email(),
+      to: faker.internet.email(),
+      body: faker.lorem.sentence(),
+      options: {
+        fake: true
+      }
+    };
+    const message = new Message(details);
+
+    push.send(message, function (error, result) {
+
+      expect(error).to.not.exist;
+      expect(result).to.exist;
+
+      expect(result.message).to.exist;
+      expect(result.message).to.be.equal('success');
+
+      done();
+
+    });
+
+  });
+
   afterEach(function (done) {
     push.stop(done);
   });
