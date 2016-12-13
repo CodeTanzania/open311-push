@@ -13,16 +13,22 @@
 //dependencies
 const path = require('path');
 const _ = require('lodash');
-const push = require(path.join(__dirname, 'lib', 'push'));
+const messages = require('open311-messages');
 
 exports = module.exports = function (options) {
   //merge options
   options = _.merge({}, options);
+
+  //initialize open311-messages
+  messages(options);
+
+  //import push
+  let push = require(path.join(__dirname, 'lib', 'push'));
 
   //init push internals
   push.options = options;
   push.init();
 
   return push;
-  
+
 };
