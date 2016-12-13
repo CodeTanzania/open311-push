@@ -20,6 +20,7 @@ const messages = require('open311-messages');
 /**
  * @param  {Object} [options] valid push notification transport options
  * @param  {String} options.apiKey valid and active Google FCM API Key
+ * @param  {Number} options.concurrency number of worker per process to be initialized
  * @param  all kue and open311-messages supported configuration options
  * @see {@link https://github.com/Automattic/kue#redis-connection-settings}
  * @return {Object}         push notification message transport
@@ -27,7 +28,7 @@ const messages = require('open311-messages');
  */
 exports = module.exports = function (options) {
   //merge options
-  options = _.merge({ timeout: 5000 }, options);
+  options = _.merge({ timeout: 5000, concurrency: 10 }, options);
 
   //ensure FCM/GCM api key
   if (_.isEmpty(options.apiKey)) {
