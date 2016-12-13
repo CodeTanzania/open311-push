@@ -1,0 +1,50 @@
+{
+  "name": "open311-push",
+  "version": "0.1.0",
+  "description": "push notification transport for open311 messages",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test",
+    "intergration": "grunt intergration"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CodeTanzania/open311-push.git"
+  },
+  "keywords": [
+    "open311",
+    "311",
+    "tanzania",
+    "push",
+    "fcm",
+    "gcm",
+    "notification"
+  ],
+  "author": {
+    "name": "lykmapipo",
+    "email": "lallyelias87@gmail.com",
+    "url": "https://github.com/lykmapipo"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CodeTanzania/open311-push/issues"
+  },
+  "homepage": "https://github.com/CodeTanzania/open311-push",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "faker": "^3.1.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-mocha-test": "^0.13.2",
+    "jshint-stylish": "^2.2.1",
+    "mocha": "^3.2.0"
+  },
+  "dependencies": {
+    "async": "^2.1.4",
+    "kue": "^0.11.5",
+    "lodash": "^4.17.2",
+    "node-gcm": "^0.14.4",
+    "open311-messages": "^0.1.0"
+  }
+}
