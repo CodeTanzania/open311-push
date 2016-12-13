@@ -17,7 +17,12 @@ const messages = require('open311-messages');
 
 exports = module.exports = function (options) {
   //merge options
-  options = _.merge({}, options);
+  options = _.merge({ timeout: 5000 }, options);
+
+  //ensure FCM/GCM api key
+  if (_.isEmpty(options.apiKey)) {
+    throw new Error('Missing FCM API Key');
+  }
 
   //initialize open311-messages
   messages(options);
