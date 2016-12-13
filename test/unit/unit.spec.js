@@ -50,7 +50,14 @@ describe('push', function () {
       to: faker.internet.email(),
       body: faker.lorem.sentence(),
       options: {
-        fake: true
+        fake: true,
+        data: {
+          key1: faker.lorem.sentence(),
+          key2: faker.random.uuid()
+        },
+        notification: {
+          icon: 'ic_launcher'
+        }
       }
     };
     const message = new Message(details);
