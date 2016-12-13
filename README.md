@@ -12,18 +12,6 @@ push notification transport for open311 messages
 ## Usage
 
 
-- Install dependencies
-```sh
-$ cd <your_module_name>
-$ npm install
-```
-
-- Open `.git/config` and update repository url
-```ruby
-[remote "origin"]
-    url = https://github.com/<your_repo_url>.git
-```
-
 ## Testing
 * Clone this repository
 
