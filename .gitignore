@@ -28,5 +28,5 @@ build/Release
 node_modules
 doc
 startup.sh
-spec/intergration.spec.js
+test/integration/intergration.spec.js
 config

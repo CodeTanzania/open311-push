@@ -18,7 +18,7 @@ test
 docs
 config
 views
-spec/intergration.spec.js
+test/integration/intergration.spec.js
 doc.html
 .travis.yml
 Gruntfile.js
