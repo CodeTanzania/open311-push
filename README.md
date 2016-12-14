@@ -22,9 +22,10 @@ $ npm install --save open311-push
 ```js
 const mongoose = require('mongoose');
 const Message = require('open311-messages')(<options>);
-const push = require('open311-push')({
+const push = require('open311-push');
+push.options = {
     apiKey:<your_fcm_api_key>
-});
+};
 
 //queue message for sending
 const message = new Message(<message_details>);
