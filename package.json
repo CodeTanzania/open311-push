@@ -45,6 +45,6 @@
     "kue": "^0.11.5",
     "lodash": "^4.17.2",
     "node-gcm": "^0.14.4",
-    "open311-messages": "^0.2.0"
+    "open311-messages": "^0.2.1"
   }
 }
