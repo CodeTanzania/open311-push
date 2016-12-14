@@ -6,6 +6,7 @@ process.env.NODE_ENV = 'test';
 const async = require('async');
 const mongoose = require('mongoose');
 const kue = require('kue');
+require('open311-messages')();
 
 //redis client for database cleanups
 const redis = kue.redis.createClientFactory({

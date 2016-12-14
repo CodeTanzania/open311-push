@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "grunt test",
-    "intergration": "grunt intergration"
+    "integration": "npm link . && npm link open311-push && grunt integration"
   },
   "repository": {
     "type": "git",

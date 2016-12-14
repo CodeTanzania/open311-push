@@ -5,9 +5,10 @@ const path = require('path');
 const expect = require('chai').expect;
 const mongoose = require('mongoose');
 const faker = require('faker');
-const push = require(path.join(__dirname, '..', '..'))({
+const push = require(path.join(__dirname, '..', '..'));
+push.options = {
   apiKey: faker.random.uuid() //fake apiKey
-});
+};
 const Message = mongoose.model('Message');
 
 describe('push', function () {
