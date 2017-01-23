@@ -43,8 +43,8 @@
   "dependencies": {
     "async": "^2.1.4",
     "kue": "^0.11.5",
-    "lodash": "^4.17.2",
+    "lodash": "^4.17.4",
     "node-gcm": "^0.14.4",
-    "open311-messages": "^0.2.2"
+    "open311-messages": "^0.4.0"
   }
 }
